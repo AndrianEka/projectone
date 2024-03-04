@@ -272,12 +272,12 @@
             </div>
         </nav>
         <!-- End Navbar -->
-        <div class="container-fluid py-4">
+        <div class="container-fluid py-0">
             @if (session()->has('success'))
                 <div class="row">
                     <div class="col-12">
                         <div class="alert alert-success" role="alert">
-                            {{ session('successs') }}
+                            {{ session('success') }}
                         </div>
                     </div>
                 </div>
