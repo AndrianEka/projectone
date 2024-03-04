@@ -25,8 +25,7 @@ class PelangganController extends Controller
     $request->validate([
       'nama' => 'required',
       'alamat' => 'required',
-      'no_hp' => 'required',
-      'keterangan' => 'required'
+      'no_hp' => 'required'
     ]);
     Pelanggan::create([
       'nama' => $request->nama,
