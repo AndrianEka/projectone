@@ -33,6 +33,6 @@ class PelangganController extends Controller
       'no_hp' => $request->no_hp,
       'keterangan' => $request->keterangan
     ]);
-    return Redirect('/pelanggan');
+    return Redirect('/pelanggan')->with('success', 'Data Berhasil Ditambahkan');
   }
 }
