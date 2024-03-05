@@ -35,4 +35,26 @@ class PelangganController extends Controller
     ]);
     return Redirect('/pelanggan')->with('success', 'Data Berhasil Ditambahkan');
   }
+
+  public function edit($id)
+  {
+    $pelanggan = Pelanggan::find($id);
+    return view('pelanggan.edit', compact(['pelanggan']));
+  }
+  public function update(Request $request, $id)
+  {
+    $request->validate([
+      'nama' => 'required',
+      'alamat' => 'required',
+      'no_hp' => 'required'
+    ]);
+    $pelanggan = Pelanggan::find($id);
+    $pelanggan->update([
+      'nama' => $request->nama,
+      'alamat' => $request->alamat,
+      'no_hp' => $request->no_hp,
+      'keterangan' => $request->keterangan
+    ]);
+    return Redirect('/pelanggan')->with('success', 'Data Berhasil Diubah');
+  }
 }
