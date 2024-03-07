@@ -23,3 +23,4 @@ Route::post('/pelanggan', [PelangganController::class, 'store']);
 Route::get('/pelanggan/create', [PelangganController::class, 'create']);
 Route::get('/pelanggan/{id}/edit', [PelangganController::class, 'edit']);
 Route::put('/pelanggan/{id}', [PelangganController::class, 'update']);
+Route::delete('/pelanggan/{id}', [PelangganController::class, 'destroy']);

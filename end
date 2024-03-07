@@ -1,0 +1,36 @@
+[33mcommit a78cf707f488d3f289e0fd6039ccfab1089e9523[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Andrian <andrianeka@hotmail.com>
+Date:   Tue Mar 5 23:37:51 2024 +0700
+
+    menu Pelanggan jadi
+
+[33mcommit a19da29baeeee8f518805ad805bd6dde182f2f6e[m
+Author: Andrian <andrianeka@hotmail.com>
+Date:   Tue Mar 5 00:47:24 2024 +0700
+
+    projectone update 2
+
+[33mcommit 2103436b0404e646d2032accbf47cea15a878bd4[m
+Author: Andrian <andrianeka@hotmail.com>
+Date:   Tue Mar 5 00:28:26 2024 +0700
+
+    project one update 1
+
+[33mcommit 90a35eb9b88474a1a071eca2e4ef847265d4180a[m
+Author: Andrian <andrianeka@hotmail.com>
+Date:   Mon Mar 4 22:40:05 2024 +0700
+
+            modified:   app/Http/Controllers/PelangganController.php
+
+[33mcommit 16d885ebdb3a49135f7eab2e9be766c190b8c3b3[m
+Author: Andrian <andrianeka@hotmail.com>
+Date:   Mon Mar 4 22:30:58 2024 +0700
+
+            modified:   app/Http/Controllers/PelangganController.php
+            modified:   resources/views/pelanggan/create.blade.php
+
+[33mcommit e2f5fe7f3eee17e8b31cda1019951f479c147944[m
+Author: Andrian <andrianeka@hotmail.com>
+Date:   Wed Feb 28 04:20:32 2024 +0700
+
+    test 1

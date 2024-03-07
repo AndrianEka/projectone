@@ -57,4 +57,11 @@ class PelangganController extends Controller
     ]);
     return Redirect('/pelanggan')->with('success', 'Data Berhasil Diubah');
   }
+
+  public function destroy($id)
+  {
+    $pelanggan = Pelanggan::find($id);
+    $pelanggan->delete();
+    return Redirect('/pelanggan')->with('success', 'Data Berhasil Dihapus');
+  }
 }

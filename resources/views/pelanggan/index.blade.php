@@ -24,7 +24,7 @@
                                     <tr>
                                         <th
                                             class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            NO ID</th>
+                                            NO</th>
                                         <th
                                             class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                             Nama</th>
@@ -42,10 +42,11 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php $i = 1; ?>
                                     @foreach ($pelanggan as $p)
                                 <tbody>
                                     <tr>
-                                        <th class="mb-0 text-md text-center" scope="row">{{ $p->id }}</th>
+                                        <th class="mb-0 text-md text-center" scope="row">{{ $i }}</th>
                                         <td>
                                             <div class="d-flex flex-column justify-content-center">
                                                 <h6 class="mb-0 text-md text-center">{{ $p->nama }}</h6>
@@ -55,15 +56,19 @@
                                         <td class="mb-0 text-md text-center">{{ $p->no_hp }}</td>
                                         <td class="mb-0 text-md text-center">{{ $p->keterangan }}</td>
                                         <td class="align-middle ">
-                                            <a href="/pelanggan/{{ $p->id }}/edit" class="mb-0 text-sm  btn btn-warning">
+                                            <a href="/pelanggan/{{ $p->id }}/edit"
+                                                class="mb-0 text-sm  btn btn-warning">
                                                 Edit
                                             </a>
-                                            <a href="" class="mb-0 text-sm  btn btn-danger">
-                                                Delete
-                                            </a>
+                                            <form action="/pelanggan/{{ $p->id }}" method="POST">
+                                                @method('DELETE')
+                                                @csrf
+                                                <input type="submit" class="mb-0 text-sm  btn btn-danger" value="Delete">
+                                            </form>
                                         </td>
                                     </tr>
                                 </tbody>
+                                <?php $i++; ?>
                                 @endforeach
                                 </tbody>
                             </table>
