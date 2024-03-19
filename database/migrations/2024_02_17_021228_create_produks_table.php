@@ -14,9 +14,11 @@ return new class extends Migration
         Schema::create('produks', function (Blueprint $table) {
             $table->id();
             $table->string('nama_produk');
+            $table->unsignedInteger('jumlah_barang');
             $table->unsignedInteger('harga_pokok');
             $table->unsignedInteger('harga_jual');
-            $table->integer('laba');
+            $table->unsignedInteger('total_harga');
+            $table->integer('keuntungan');
             $table->timestamps();
         });
     }
