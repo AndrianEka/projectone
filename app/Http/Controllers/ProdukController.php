@@ -11,6 +11,10 @@ class ProdukController extends Controller
     public function index()
     {
         $produk = Produk::all();
+        foreach ($produk as $p) {
+            $p->total_harga = $p->jumlah_barang * $p->harga_jual;
+            $p->keuntungan = ($p->total_harga) - ($p->jumlah_barang * $p->harga_pokok);
+        }
         return view('produk.index', compact(['produk']));
     }
 
@@ -52,7 +56,7 @@ class ProdukController extends Controller
             'jumlah_barang' => 'required',
             'harga_pokok' => 'required',
             'harga_jual' => 'required',
-            'total_harga' => 'required',
+            'total_harga' => '',
             'keuntungan' => 'required'
         ]);
         $produk = Produk::find($id);
@@ -73,5 +77,4 @@ class ProdukController extends Controller
         $produk->delete();
         return Redirect('/produk')->with('success', 'Data Berhasil Dihapus');
     }
-     
 }

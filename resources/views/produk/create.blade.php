@@ -46,14 +46,14 @@
                                     <input name="harga_jual" type="" class="form-control"
                                         id="exampleFormControlInput1">
                                 </div>
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Total Harga</label>
-                                    <input name="total_harga" type="" class="form-control"
+                                <div hidden class="mb-3">
+                                    <label  for="exampleFormControlInput1" class="form-label">Total Harga</label>
+                                    <input name="total_harga" type="" class="form-control" value="0"
                                         id="exampleFormControlInput1">
                                 </div>
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Keuntungan</label>
-                                    <input name="keuntungan" type="" class="form-control"
+                                <div hidden class="mb-3">
+                                    <label  for="exampleFormControlInput1" class="form-label">Keuntungan</label>
+                                    <input name="keuntungan" type="" class="form-control" value="0"
                                         id="exampleFormControlInput1">
                                 </div>
                                 <div class="text-center">
